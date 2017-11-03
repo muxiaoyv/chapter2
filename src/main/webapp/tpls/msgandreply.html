@@ -1,0 +1,42 @@
+<div>
+	<div class="panel panel-default">
+	    <div class="panel-body">		
+       		<h2 class="card-title">{{msg.title}}</h2>
+            <img class="card-avatar" src="../img/head.jpg"><span class="card-username">{{msg.userName}}</span>
+            <div class="card-content">
+                {{msg.content}}	
+            </div>
+            <div class="card-footer">	            
+	            <button type="button" data-toggle="modal" data-target="#commitModal" class=" btn btn-default btn-primary" aria-label="Left Align">
+	            	<span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+	            	<span >评论（{{msg.count}}条评论）</span>
+	            </button>
+	            <button type="button" ng-click="upCount(msg)" class="btn btn-default col-lg-offset-1" aria-label="Left Align">
+	            	<span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+	            	<span >{{msg.upCount}}</span>
+	            </button>
+	        	<p class="card-date"><span class="badge">{{ getDates(msg.date) | date:'yyyy-MM-dd HH:mm:ss' }}</span></p>
+        	</div>
+	    </div>
+	</div>
+	<div class="reply-header">
+    	<h3>评论：</h3>
+	</div>
+	    <div class="panel panel-default" ng-repeat="data in replylist">
+		    <div class="panel-body">
+	            <img class="card-avatar" src="../img/head.jpg"><span class="card-username">{{data.userName}}</span>
+	            <div class="card-content">
+	                {{data.content}}	
+	            </div>
+	            <div class="card-footer">
+		            <button ng-click="upCount(data)" type="button" class="btn btn-default" aria-label="Left Align">
+		            	<span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+		            	<span >{{data.upCount}}</span>
+		            </button>
+		        	<p class="card-date"><span class="badge">{{ getDates(data.date) | date:'yyyy-MM-dd HH:mm:ss' }}</span></p>
+	        	</div>
+		    </div>
+		</div>
+	    <loadmore></loadmore>
+</div>
+

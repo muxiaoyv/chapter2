@@ -1,0 +1,21 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" id="brand" ng-href="{{href('/message')}}"><strong>平安</strong>留言板</a>     
+    </div>
+    <ul class="nav navbar-nav">
+    	<li><a class="navbar-link navbar-left" ng-href="{{href('/users')}}" ng-show="nav1">用户管理</a></li>
+      <li><a class="navbar-link navbar-left" ng-href="{{href('/messagelist')}}" ng-show="nav2">留言管理</a></li>
+     </ul>
+    <form class="navbar-form navbar-left" role="search">
+		  <div class="form-group">
+		    <input type="text" class="form-control" placeholder="搜索" ng-model="keyWord">
+		  </div>
+		  <button type="submit" class="btn btn-default" ng-click="search()">搜索</button>
+		</form>
+		<ul class="nav navbar-nav navbar-right">
+			<li><a class="navbar-link" ng-href="{{href('/user/'+curUser.userId)}}"><img class="card-avatar" src="../img/head.jpg"><span class="card-username">{{curUser.userName}}</span></a></li>
+    </ul>
+  </div>
+</nav>

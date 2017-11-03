@@ -1,0 +1,24 @@
+var msgApp = angular.module('msgApp',['ngCookies','ngRoute','mesgCtrls','formDirective', 'messageDetail','listDirective','userlist'])
+    msgApp.config(function($routeProvider){
+        $routeProvider.when('/message/:id',{
+            templateUrl:'tpls/messagedetail.html',
+            controller:'messageCtrl'
+        }).when('/message',{
+            templateUrl:'tpls/message.html',
+            controller:'messagelistCtrl'
+        }).when('/users',{
+            templateUrl:'tpls/userlist.html',
+            controller:'userlistCtrl'
+        }).when('/messagelist',{
+            templateUrl:'tpls/messagelist.html',
+            controller:'messageEditCtrl'
+        }).when('/messagelist/:id',{
+            templateUrl:'tpls/commitlist.html',
+            controller:'messageCommitCtrl'
+        }).when('/user/:id',{
+            templateUrl:'tpls/userdetail.html',
+            controller:'userDetailCtrl'
+        }).otherwise({
+            redirectTo:'/message'
+        })
+    })

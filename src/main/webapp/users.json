@@ -1,0 +1,1 @@
+[{"userId":1,"userName":"admin","password":null,"permissions":7,"lastIp":null,"roles":"ADMIN","credits":5,"lastVisit":null},{"userId":2,"userName":"ls","password":null,"permissions":3,"lastIp":null,"roles":"MEMBER","credits":0,"lastVisit":null},{"userId":3,"userName":"111","password":null,"permissions":3,"lastIp":null,"roles":"MEMBER","credits":5,"lastVisit":null}]

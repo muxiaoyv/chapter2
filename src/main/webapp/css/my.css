@@ -1,0 +1,157 @@
+body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 { 
+	font-family: Microsoft YaHei,'宋体' , Tahoma, Helvetica, Arial, sans-serif;
+}
+body{
+	background-color: #eee;
+}
+
+#loadingPage{
+position: fixed;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background: #fff;
+opacity: 0.7;
+z-index: 1060;
+}
+#loadingTips{
+position: absolute;
+width: 180px;
+height: 80px;
+line-height: 80px;
+color: rgb(102, 102, 102);
+font-size: 20px;
+}
+#loadingTips .context{
+	position: absolute;
+	left: 80px;
+}
+
+.loading{
+	position: absolute;
+    width: 80px;
+    height: 40px;
+    display: inline-block;
+    top: 10px;
+}
+.loading span{
+    display: inline-block;
+    width: 8px;
+    height: 100%;
+    border-radius: 4px;
+    background: lightgreen;
+    -webkit-animation: load 1s ease infinite;
+}
+@-webkit-keyframes load{
+    0%,100%{
+        height: 40px;
+        background: lightgreen;
+    }
+    50%{
+        height: 70px;
+        margin: -15px 0;
+        background: lightblue;
+    }
+}
+.loading span:nth-child(2){
+    -webkit-animation-delay:0.2s;
+}
+.loading span:nth-child(3){
+    -webkit-animation-delay:0.4s;
+}
+.loading span:nth-child(4){
+    -webkit-animation-delay:0.6s;
+}
+.loading span:nth-child(5){
+    -webkit-animation-delay:0.8s;
+}
+
+#message-edit{
+	position:fixed;
+	bottom:60px;
+	right:100px;
+}
+.btn-permission{
+	border:0px;
+}
+
+.card-username{
+	color: #555;
+	font-size: 16px;
+	font-weight: 600;
+	margin-left: 5px;
+}
+
+.card-avatar{
+	width: 32px;
+	height: 32px;
+	display: inline-block;
+}
+
+.card-title{
+	font-size: 24px;
+	font-weight: 600;
+}
+
+.card-date{
+	display: inline-block;
+	float: right;
+}
+
+.card-footer{
+	margin-top: 16px;
+}
+
+.card-content{
+	max-height:100px;
+	display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+	margin-top: 16px;
+	line-height: 1.67;
+	font-size: 16px;
+	overflow: hidden;
+	text-overflow:ellipsis;
+}
+
+#brand{
+	color:orange;
+}
+
+.big-avatar{
+	width: 64px;
+	height: 64px;
+}
+
+.modify-passw{
+	display: inline-block;
+	float: right;
+}
+
+.logout-link{
+	color:#FFFFFF;	
+}
+
+.logout-link:hover{
+	color:#FFFFFF;	
+	text-decoration:none;
+}
+
+.logout-link:focus{
+	color:#FFFFFF;	
+	text-decoration:none;
+	outline: 0px;
+}
+
+.navbar{
+	position: fixed;
+	top:0px;
+	left: 0px;
+	width:100%;
+}
+
+.container{
+	margin-top: 80px;
+	margin-bottom: 30px;
+}

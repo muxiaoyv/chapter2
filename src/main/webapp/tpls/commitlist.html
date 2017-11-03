@@ -1,0 +1,30 @@
+<div class="panel panel-default">
+  <div class="panel-heading">留言管理</div>
+  <div class="panel-body table-responsive">
+	<table class="table table-striped " data-toggle="table">
+		<thead>
+			<th>留言ID</th>			
+			<th>内容</th>
+			<th>发布人</th>
+			<th>发表时间</th>
+			<th>操作</th>
+		</thead>
+		<tr ng-repeat="data in messagelist">
+			<td class="col-md-1">{{data.messageId}}</td>			
+			<td class="col-md-6">{{data.content}}</td>
+			<td class="col-md-1">{{data.userName}}</td>
+			<td>{{getDates(data.date)| date:'yyyy-MM-dd HH:mm:ss'}}</td>
+			<td>
+				<span data-toggle="tooltip" data-placement="right" title="删除留言">
+					<a ng-click='confirm(deleteMessage(data.messageId))'>
+						<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+					</a>
+				</span>
+			</td>
+			<td></td>
+		</tr>
+	</table>
+	
+	<modal></modal>
+  </div>
+</div>
