@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:b="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/security
+		http://www.springframework.org/schema/security/spring-security.xsd">
+    <global-method-security secured-annotations="enabled"></global-method-security>
+    <http pattern="/src/login.html*" security="none" />
+    <http pattern="/css/*" security="none" />
+    <http pattern="/lib/*" security="none" />
+    <http pattern="/api/register" security="none" />
+    <http auto-config="true">
+        <form-login login-page="/src/login.html" default-target-url='/' authentication-failure-url="/login.jsp"
+                    authentication-success-handler-ref="loginController"></form-login>
+        <logout logout-url="/logout" logout-success-url="/src/login.html" invalidate-session="true"/>
+        <intercept-url pattern="/**" access="ROLE_ADMIN, ROLE_MEMBER"></intercept-url>
+    </http>
+    <authentication-manager>
+        <authentication-provider user-service-ref="userServiceS"></authentication-provider>
+    </authentication-manager>
+    <b:bean id="userServiceS" class="com.smart.security.UserService"></b:bean>
+    <b:bean id="loginController" class="com.smart.web.LoginController"></b:bean>
+</b:beans>

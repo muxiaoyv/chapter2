@@ -7,9 +7,25 @@ public class User implements Serializable {
     private int userId;
     private String userName;
     private String password;
-    private int credits;
+    private int permissions;
     private String lastIp;
+    private String roles;
+    private int credits;
     private Date lastVisit;
+    private String email;
+
+    public User(int userId, String userName, int permissions, String roles, int credits, Date lastVisit, String email) {
+        this.userId = userId;
+        this.userName = userName;
+        this.permissions = permissions;
+        this.roles = roles;
+        this.credits = credits;
+        this.lastVisit = lastVisit;
+        this.email = email;
+
+    }
+
+    public User(){}
 
     public int getUserId() {
         return userId;
@@ -35,12 +51,12 @@ public class User implements Serializable {
         this.password = password;
     }
 
-    public int getCredits() {
-        return credits;
+    public int getPermissions() {
+        return permissions;
     }
 
-    public void setCredits(int credits) {
-        this.credits = credits;
+    public void setPermissions(int permissions) {
+        this.permissions = permissions;
     }
 
     public String getLastIp() {
@@ -57,5 +73,29 @@ public class User implements Serializable {
 
     public void setLastVisit(Date lastVisit) {
         this.lastVisit = lastVisit;
+    }
+
+    public String getRoles() {
+        return roles;
+    }
+
+    public void setRoles(String roles) {
+        this.roles = roles;
+    }
+
+    public int getCredits() {
+        return credits;
+    }
+
+    public void setCredits(int credits) {
+        this.credits = credits;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
