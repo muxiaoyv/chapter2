@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: org.springframework.security:spring-security-core:3.1.4.release">
     <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/3.1.4.Release/spring-security-core-3.1.4.RELEASE.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springFramework/security/spring-security-core/3.1.4.RELEASE/spring-security-core-3.1.4.RELEASE.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/3.1.4.release/spring-security-core-3.1.4.release-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/3.1.4.Release/spring-security-core-3.1.4.Release-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/3.1.4.release/spring-security-core-3.1.4.release-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/3.1.4.Release/spring-security-core-3.1.4.Release-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
